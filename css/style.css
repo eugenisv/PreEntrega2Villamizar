@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* GENERALES */
+:root {
+    --color-white: #FFF;
+    --color-black: #212922;
+    --color-destaque: #01A437;
+    --color-claro: #ACE894;
+    --color-CTA: #E55934;
+}
+@font-face {
+    font-family: 'Fonarto';
+    src: url(../fonts/fonarto.ttf);
+}
+
+ul {
+    list-style: none;
+}
+
+/* DISPLAY */
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.vflex {
+    flex-direction: column;
+}
+
+.flxCenter {
+    justify-content: center;
+}
+
+.flxAlgnCenter {
+    align-items: center;
+}
+.centerDiv {
+    width:50%; 
+    margin:0 auto;
+}
+
+button {
+    font-family: 'Fonarto';
+    display: block;
+}
+
+/* TEXTO */
+.txtBlanco {
+    color: var(--color-white);
+}
+
+.txtDestaque {
+    color: var(--color-destaque);
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.fntAsap {
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+.fntArima {
+    font-family: 'Arima', cursive;
+}
+
+.fntFonarto {
+    font-family: 'Fonarto';
+}
+
+.flxAround {
+    justify-content: space-around;
+}
+
+
+.navBar {
+    position: fixed;
+}
+#indexHero {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(33, 41, 34, 0) 6.77%, #212922 100%),url(../img/burger-hero.png);
+    background-blend-mode: hard-light, normal;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#indexhero__SMlogos {
+    position: absolute;
+    left: 120px;
+    bottom: 30%;
+}
+
+
