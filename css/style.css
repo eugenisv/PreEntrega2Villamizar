@@ -9,6 +9,7 @@
     --color-destaque: #01A437;
     --color-claro: #ACE894;
     --color-CTA: #E55934;
+    --color-trans: #F8F8F81A;
 }
 @font-face {
     font-family: 'Fonarto';
@@ -55,6 +56,10 @@ button {
     display: block;
 }
 
+.bg-oscuro {
+    background-color: var(--color-black);
+}
+
 /* TEXTO */
 .txtBlanco {
     color: var(--color-white);
@@ -98,10 +103,22 @@ h2 {
     height: 100vh;
 }
 
-#indexhero__SMlogos {
+.indexhero__SMlogos {
     position: absolute;
     left: 120px;
     bottom: 30%;
+    gap: 15px;
+}
+
+.SMlogo {
+    background: var(--color-trans);
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* Carousel menu */
@@ -184,5 +201,9 @@ h2 {
     
 }
 
+/* Footer */
 
+.footer__SMlogos {
+ gap: 25px;
+}
 
