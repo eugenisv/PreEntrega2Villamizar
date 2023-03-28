@@ -40,6 +40,11 @@ ul {
 .flxAlgnCenter {
     align-items: center;
 }
+
+.flxAround {
+    justify-content: space-around;
+}
+
 .centerDiv {
     width:50%; 
     margin:0 auto;
@@ -75,8 +80,8 @@ button {
     font-family: 'Fonarto';
 }
 
-.flxAround {
-    justify-content: space-around;
+h2 {
+    font-family: 'Arima', cursive;
 }
 
 
