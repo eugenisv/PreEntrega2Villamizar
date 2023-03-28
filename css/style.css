@@ -46,7 +46,7 @@ ul {
 }
 
 .centerDiv {
-    width:50%; 
+    width:60%; 
     margin:0 auto;
 }
 
@@ -84,10 +84,12 @@ h2 {
     font-family: 'Arima', cursive;
 }
 
-
+/* header */
 .navBar {
     position: fixed;
+    z-index: 1000;
 }
+
 #indexHero {
     background: radial-gradient(50% 50% at 50% 50%, rgba(33, 41, 34, 0) 6.77%, #212922 100%),url(../img/burger-hero.png);
     background-blend-mode: hard-light, normal;
@@ -102,7 +104,7 @@ h2 {
     bottom: 30%;
 }
 
-
+/* Carousel menu */
 .carousel-container {
     width: 80%;
     margin: 0 auto;
@@ -169,5 +171,18 @@ h2 {
     padding-bottom: 30px;
 
 }
+
+/* Encuentranos - Ubicaciones */
+.ubicaciones-elemento {
+    width: 50%;
+    height: 700px;
+}
+#imgIndexUbicaciones {
+    background: url(../img/restaurante-personas-comiendo.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
 
 
