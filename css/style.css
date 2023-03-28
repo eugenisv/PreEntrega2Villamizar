@@ -41,8 +41,8 @@ ul {
     align-items: center;
 }
 
-.flxAround {
-    justify-content: space-around;
+.flxBetween {
+    justify-content: space-between;
 }
 
 .centerDiv {
@@ -127,11 +127,47 @@ h2 {
 
 .carousel-control-prev {
     left: -10px;
-  }
+}
   
-  .carousel-control-next {
+.carousel-control-next {
     right: -10px;
-  }
+}
 
+/* Ingredientes */
+.vIngredientes-container {
+    position: relative;
+    height: 500px;
+}
+
+.vIngredientes-item {
+    width: calc(100% / 7);
+    padding: 60px 0 60px 0px;
+    box-sizing: border-box;
+    background-color: var(--color-claro);
+    border-right: 2px solid var(--color-white);
+}
+
+.vIngredientes-item p {
+    max-width: 138px;
+    margin-left: 20px;
+
+}
+
+.vIngredientes-item img {
+    align-self: center;
+    width: 80%;
+    height: auto;
+}
+
+#verMasIngredientes {
+    width: calc(2* (100%/7));
+    background: url(../img/ingredientes-varios.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+
+}
 
 
