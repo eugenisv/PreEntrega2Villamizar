@@ -103,3 +103,35 @@ h2 {
 }
 
 
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-item {
+    width: auto;
+}
+
+.carousel-items {
+    gap: 20px;
+}
+.carousel-wrapper {
+    overflow: hidden;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control-prev {
+    left: -10px;
+  }
+  
+  .carousel-control-next {
+    right: -10px;
+  }
+
+
+
