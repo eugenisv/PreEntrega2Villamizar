@@ -10,29 +10,49 @@
     --color-claro: #ACE894;
     --color-CTA: #E55934;
     --color-trans: #F8F8F81A;
+    --fntSize-txtNormal: 16px;
+    --fntSize-txtSubttl: 22px;
+    --fntSize-txtTtl: 40px;
+    --fntSize-txtPeq: 14px;
 }
 @font-face {
     font-family: 'Fonarto';
     src: url(../fonts/fonarto.ttf);
 }
 
-ul {
-    list-style: none;
+/* ELEMENTOS */
+
+ul {list-style: none;}
+
+button {
+    font-family: 'Fonarto';
+    display: block;
+    font-size: var(--fntSize-txtSubttl);
+}
+
+h2 {
+    font-family: 'Arima', cursive;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 500;
+}
+p {
+    font-family: 'Arima', cursive;
+    font-size: var(--fntSize-txtNormal);
 }
 
 /* DISPLAY */
-.grid {
-    display: grid;
-}
+.grid {display: grid;}
 
 .flex {
     display: flex;
     flex-direction: row;
 }
 
-.vflex {
-    flex-direction: column;
-}
+.vflex {flex-direction: column;}
 
 .flxCenter {
     justify-content: center;
@@ -46,47 +66,43 @@ ul {
     justify-content: space-between;
 }
 
-.centerDiv {
-    width:60%; 
-    margin:0 auto;
-}
+.gap20 {gap:20px}
+.gap25{gap:25px}
 
-button {
-    font-family: 'Fonarto';
-    display: block;
+.centerDiv {width:60%; margin:0 auto;
 }
+.padding80 {padding: 0 10%;}
 
-.bg-oscuro {
-    background-color: var(--color-black);
-}
+.borderBox {box-sizing: border-box;}
+
+.bg-oscuro {background-color: var(--color-black);}
 
 /* TEXTO */
-.txtBlanco {
-    color: var(--color-white);
-}
+.txtBlanco {color: var(--color-white);}
 
-.txtDestaque {
-    color: var(--color-destaque);
-}
+.txtDestaque {color: var(--color-destaque);}
 
-.txtCenter {
-    text-align: center;
-}
+.txtShadowBlanco {text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.5);}
+
+.txtCenter {text-align: center;}
 
 .fntAsap {
     font-family: 'Asap Condensed', sans-serif;
+    font-weight: 500;
 }
+
+.txt40 {font-size: var(--fntSize-txtTtl);}
+.txt22 {font-size: var(--fntSize-txtSubttl);}
+.txt96 {font-size: 96px;}
 
 .fntArima {
     font-family: 'Arima', cursive;
+    font-weight: 500;
 }
 
 .fntFonarto {
     font-family: 'Fonarto';
-}
-
-h2 {
-    font-family: 'Arima', cursive;
+    font-weight: 700;
 }
 
 /* header */
@@ -95,6 +111,8 @@ h2 {
     z-index: 1000;
 }
 
+header {position: relative;}
+
 #indexHero {
     background: radial-gradient(50% 50% at 50% 50%, rgba(33, 41, 34, 0) 6.77%, #212922 100%),url(../img/burger-hero.png);
     background-blend-mode: hard-light, normal;
@@ -102,6 +120,16 @@ h2 {
     background-position: center;
     height: 100vh;
 }
+
+#hero-container {
+    height: 100%;
+    padding-top: 5vh;
+    box-sizing: border-box;
+}
+
+#hero-content {height: 100%;}
+
+#fita-hero {font-size: 246px;}
 
 .indexhero__SMlogos {
     position: absolute;
@@ -118,8 +146,26 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+.razonFita {
+    width: calc(100%/3);
+    gap: 20px;
+    align-items: center;
+}
+
+.razonFita img {height: 50px; width: 50px;}
+
+#razones-container {gap: 100px;}
+
+/* Banner */
+
+.banner {
+    background: linear-gradient(0deg, rgba(172, 232, 148, 0.7), rgba(172, 232, 148, 0.7)), url(../img/fondo-blanco-lineas.png);
+    background-position: center;
+    background-size: cover;
+}
+
 
 /* Carousel menu */
 .carousel-container {
@@ -128,29 +174,13 @@ h2 {
     position: relative;
 }
 
-.carousel-item {
-    width: auto;
-}
+.carousel-item {width: auto;}
 
-.carousel-items {
-    gap: 20px;
-}
-.carousel-wrapper {
-    overflow: hidden;
-}
+.carousel-wrapper {overflow: hidden;}
 
-.carousel-control {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control-prev {
-    left: -10px;
-}
-  
-.carousel-control-next {
-    right: -10px;
-}
+.carousel-control {position: absolute; top: 50%;}
+.carousel-control-prev {left: -10px;}  
+.carousel-control-next {right: -10px;}
 
 /* Ingredientes */
 .vIngredientes-container {
@@ -169,7 +199,11 @@ h2 {
 .vIngredientes-item p {
     max-width: 138px;
     margin-left: 20px;
-
+}
+.vIngredientes-item p span {
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 400;
+    font-size: var(--fntSize-txtSubttl);
 }
 
 .vIngredientes-item img {
@@ -186,7 +220,6 @@ h2 {
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 30px;
-
 }
 
 /* Encuentranos - Ubicaciones */
@@ -194,16 +227,11 @@ h2 {
     width: 50%;
     height: 700px;
 }
+
 #imgIndexUbicaciones {
     background: url(../img/restaurante-personas-comiendo.jpg);
     background-position: center;
     background-size: cover;
-    
 }
 
-/* Footer */
-
-.footer__SMlogos {
- gap: 25px;
-}
 

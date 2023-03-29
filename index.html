@@ -30,7 +30,7 @@
 
       <section id="indexHero">
         <!-- HERO -->
-        <div class="centerDiv flex flxCenter">
+        <div id="hero-container" class="centerDiv">
           <div class="indexhero__SMlogos flex vflex">
             <div class="SMlogo">
               <img src="img/sm-instagram.svg">
@@ -46,9 +46,9 @@
             </div>
           </div>
   
-          <div class="flex vflex flxAlgnCenter txtBlanco" id="heroContent">
-            <h1 class="fntFonarto">Fita</h1>
-            <p>Comer saludable</p>
+          <div class="flex vflex flxAlgnCenter flxBetween txtBlanco" id="hero-content">
+            <h1 id="fita-hero" class="fntFonarto txtShadowBlanco">Fita</h1>
+            <p class="txtShadowBlanco fntAsap txt22">Comer saludable, ¡no tiene que ser aburrido!</p>
             <button>Ordenar Ahora</button>
             <button>Comprar Productos</button>
             <img src="img/iconMouse.svg" width="72px" height="60px">
@@ -63,18 +63,18 @@
       <section class="txtCenter">
         <!-- RAZONES FITA -->
         <h2 class="fntArima">¿Por qué <span class="fntFonarto txtDestaque">Fita</span>?</h2>
-        <div class="flex">
-          <div class="vflex">
+        <div id="razones-container"class="flex padding80 borderBox">
+          <div class="flex vflex razonFita">
             <img src="img/hoja.svg" alt="icono de una hoja">
             <h3>Fresco y Orgánico</h3>
             <p>Es lo que caracteriza tanto a nuestros ingredientes como a nuestras preparaciones.</p>
           </div>
-          <div class="vflex">
+          <div class="flex vflex razonFita">
             <img src="img/people.svg" alt="icono de una hoja">
             <h3>Opciones para todxs</h3>
             <p>¿Dieta vegana, vegetariana, ovolactovegetariana, flexitariana? . . . No importa tus preferencias, ¡tenemos opciones para tí!</p>
           </div>
-          <div class="vflex">
+          <div class="flex vflex razonFita">
             <img src="img/sustentable.svg" alt="icono de una hoja">
             <h3>Sustentable</h3>
             <p>Fita trabaja con los agricultores locales para obtener productos de la mejor calidad posible.</p>
@@ -82,25 +82,28 @@
         </div>
       </section>
 
-      <section class="banner" class="grid">
+      <section class="banner">
         <!-- BANNER -->
-        <img src="#" alt="#">
-        <div class="vflex">
-          <p class="fntFonarto txtDestaque">Fita</p>
-          <p>La opción saludable para tu día a día</p>
-          <button>Ordenar Ahora</button>
+        <div class="flex flxBetween flxAlgnCenter">
+          <img src="img/banner-left.png" height="340px" width="auto" alt="#">
+          <div class="flex vflex flxAlgnCenter">
+            <p class="fntFonarto txtDestaque txt96">Fita</p>
+            <p class="txt40">La opción saludable para tu día a día</p>
+            <button>Ordenar Ahora</button>
+          </div>
+          <img src="img/banner-right.png" height="455px" width="auto" alt="#">
         </div>
-        <img src="#" alt="#">
+       
       </section>
 
-      <section>
+      <section class="flex vflex flxAlgnCenter">
         <!-- VISTA MENU -->
         <h2 class="txtCenter">¿Antojo?,<br>¡Te resolvemos de inmediato!</h2>
         
         <div class="carousel-container">
           <div class="carousel-wrapper">
             <div class="carousel flex">
-              <div class="carousel-items flex">
+              <div class="carousel-items flex gap20">
                 <div class="carousel-item">
                   <img src="img/meal-prep.jpg" style="height: 188px; width:267px;">
                   <h3>Meal Prep Vegetariano</h3>
@@ -198,7 +201,7 @@
         <!-- INGREDIENTES -->
         <div class="flex vIngredientes-container">
           <div class="vIngredientes-item flex vflex flxCenter">
-            <p>Ingredientes <br> CON LA MEJOR CALIDAD</p>
+            <p>Ingredientes <br> <span>CON LA MEJOR CALIDAD</span></p>
           </div>
 
           <div id="verMasIngredientes" class="flex">
@@ -206,22 +209,22 @@
           </div>
 
           <div class="vIngredientes-item flex vflex flxBetween">
-            <p>Lorem Impsum <br>CONSEC ADIPISCING</p>
+            <p>Lorem Impsum <br><span>CONSEC ADIPISCING</span></p>
             <img src="img/ingrediente-1.png" height="177px" width="177px">
           </div>
 
           <div class="vIngredientes-item flex vflex flxBetween">
-            <p>Lorem Impsum <br>CONSEC ADIPISCING</p>
+            <p>Lorem Impsum <br><span>CONSEC ADIPISCING</span></p>
             <img src="img/ingrediente-2.png" height="177px" width="177px">
           </div>
 
           <div class="vIngredientes-item flex vflex flxBetween">
-            <p>Lorem Impsum <br>CONSEC ADIPISCING</p>
+            <p>Lorem Impsum <br><span>CONSEC ADIPISCING</span></p>
             <img src="img/ingrediente-3.png" height="177px" width="177px">
           </div>
 
           <div class="vIngredientes-item flex vflex flxBetween">
-            <p>Lorem Impsum <br>CONSEC ADIPISCING</p>
+            <p>Lorem Impsum <br><span>CONSEC ADIPISCING</span></p>
             <img src="img/ingrediente-4.png" height="177px" width="177px">
           </div>
         </div>
@@ -231,7 +234,7 @@
         <!-- UBICACIONES -->
         <div class="flex txtCenter">
           <div class="ubicaciones-elemento flex flxAlgnCenter">
-            <div class="flex vflex flxAlgnCenter flxCenter centerDiv">
+            <div class="flex vflex flxAlgnCenter flxCenter centerDiv gap25">
               <h2>Encuéntranos</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus, risus a luctus sollicitudin, urna mi congue lorem, vel posuere ipsum justo nec orci. Fusce semper malesuada nulla at semper. Curabitur finibus quam sem, sed euismod eros lacinia at. Vivamus tincidunt, lectus in rutrum sagittis, turpis libero ullamcorper nisl, eu posuere ante nisi sed orci. </p>
               <button>Ver Ubicaciones</button>
@@ -245,9 +248,9 @@
     </main>
     <footer class="bg-oscuro">
       <!-- FOOTER -->
-      <div class="flex vflex flxAlgnCenter" >
+      <div class="flex vflex flxAlgnCenter gap20" >
         <img src="img/logo-letras-derecha.png" height="92px" width="160px">
-        <div class="flex flxAlgnCenter footer__SMlogos">
+        <div class="flex flxAlgnCenter footer__SMlogos gap25">
           <div class="SMlogo">
             <img src="img/sm-instagram.svg">
           </div>
