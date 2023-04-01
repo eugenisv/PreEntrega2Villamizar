@@ -30,6 +30,11 @@ button {
     font-size: var(--fntSize-txtSubttl);
 }
 
+img {
+    /* object-fit: cover;
+    object-position: center; */
+}
+
 h2 {
     font-family: 'Arima', cursive;
     font-weight: 500;
@@ -66,6 +71,10 @@ p {
     justify-content: space-between;
 }
 
+.flxEnd {
+    justify-content: flex-end;
+}
+
 .gap20 {gap:20px}
 .gap25{gap:25px}
 
@@ -76,6 +85,11 @@ p {
 .borderBox {box-sizing: border-box;}
 
 .bg-oscuro {background-color: var(--color-black);}
+
+.bgImgCC {
+    background-position: center;
+    background-size: cover;
+}
 
 /* TEXTO */
 .txtBlanco {color: var(--color-white);}
@@ -106,12 +120,14 @@ p {
 }
 
 /* header */
+header {position: relative;}
 .navBar {
     position: fixed;
     z-index: 1000;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
 }
-
-header {position: relative;}
 
 #indexHero {
     background: radial-gradient(50% 50% at 50% 50%, rgba(33, 41, 34, 0) 6.77%, #212922 100%),url(../img/burger-hero.png);
@@ -124,7 +140,6 @@ header {position: relative;}
 #hero-container {
     height: 100%;
     padding-top: 5vh;
-    box-sizing: border-box;
 }
 
 #hero-content {height: 100%;}
@@ -191,7 +206,6 @@ header {position: relative;}
 .vIngredientes-item {
     width: calc(100% / 7);
     padding: 60px 0 60px 0px;
-    box-sizing: border-box;
     background-color: var(--color-claro);
     border-right: 2px solid var(--color-white);
 }
