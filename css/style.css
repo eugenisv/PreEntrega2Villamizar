@@ -28,12 +28,38 @@ button {
     font-family: 'Fonarto';
     display: block;
     font-size: var(--fntSize-txtSubttl);
+
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 16px 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-img {
-    /* object-fit: cover;
-    object-position: center; */
+button:hover {
+    background-color: var(--color-destaque);
 }
+
+.background-CTA {
+    background-color: var(--color-CTA);
+}
+
+.button-unfilled-white {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+}
+
+.button-unfilled-black {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+}
+/* 
+img {
+    object-fit: cover;
+    object-position: center;
+} */
 
 h2 {
     font-family: 'Arima', cursive;
@@ -115,7 +141,7 @@ p {
 }
 
 .fntFonarto {
-    font-family: 'Fonarto';
+    font-family: 'Fonarto', sans-serif;
     font-weight: 700;
 }
 
@@ -189,11 +215,11 @@ header {position: relative;}
     position: relative;
 }
 
-.carousel-item {width: auto;}
+.carousel-item {width: auto; border-radius: 11px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); overflow: hidden;}
 
 .carousel-wrapper {overflow: hidden;}
 
-.carousel-control {position: absolute; top: 50%;}
+.carousel-control {position: absolute; top: 50%; border-radius: 50%; padding: 0; width: 36px; height: 36px; font-weight: bold;}
 .carousel-control-prev {left: -10px;}  
 .carousel-control-next {right: -10px;}
 
