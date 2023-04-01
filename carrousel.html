@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-.carousel-container {
+/* .carousel-container {
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -52,13 +52,89 @@
 
 .carousel-control-next {
   right: 0;
+} */
+
+ul {
+  display: none;
+}
+
+.menu-toggle:checked + ul {
+  display: block;
+}
+
+ul li {
+  display: block;
+}
+
+/* Hide the checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the label as the hamburger icon */
+.menu-icon {
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* Style the label as the X icon when the menu is open */
+input[type="checkbox"]:checked + .menu-icon::before {
+  content: "";
+}
+
+input[type="checkbox"]:checked + .menu-icon::after {
+  content: "X";
+}
+
+/* Style the menu */
+.menu {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+/* Show the menu when the checkbox is checked */
+input[type="checkbox"]:checked + .menu {
+  display: block;
+}
+
+/* Style the menu items */
+.menu li {
+  border-bottom: 1px solid #ccc;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu li a {
+  color: #333;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background: red;
 }
 
 
 </style>
 </head>
 <body>
-    <div class="carousel-container">
+    <!-- <div class="carousel-container">
         <div class="carousel-wrapper">
           <div class="carousel">
             <div class="carousel-items">
@@ -77,7 +153,15 @@
         </div>
         <button class="carousel-control carousel-control-prev">&lt;</button>
         <button class="carousel-control carousel-control-next">&gt;</button>
-      </div>
+      </div> -->
+
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-icon">&#9776;</label>
+<ul class="menu">
+  <li><a href="#">Menu Item 1</a></li>
+  <li><a href="#">Menu Item 2</a></li>
+  <li><a href="#">Menu Item 3</a></li>
+</ul>
 
 <script>
     const carousel = document.querySelector(".carousel");
