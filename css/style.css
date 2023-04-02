@@ -261,7 +261,7 @@ header {position: relative;}
 
 #verMasIngredientes {
     width: calc(2* (100%/7));
-    background: url(../img/ingredientes-varios.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(../img/ingredientes-varios.jpg);
     background-position: center;
     background-size: cover;
     align-items: flex-end;
@@ -270,7 +270,7 @@ header {position: relative;}
 }
 
 /* Encuentranos - Ubicaciones */
-.ubicaciones-elemento {
+.contUbicaciones {
     width: 50%;
     height: 700px;
 }
@@ -284,14 +284,20 @@ header {position: relative;}
 /* Media Queries */
 
 @media (max-width: 1020px) {
+    /* Generales */
     .desaparecerMobile {display: none;}
-    .banner-content {padding: 30px;}
     .vflexMobile {flex-direction: column; align-items: center;}
+    button {font-size: 20px; white-space: nowrap;}
+
+    /* Banner */
+    .banner-content {padding: 30px;}
+
+    /* Index */
     .razonFita {width: 100%;}
     #razones-container {gap: 30px;}
     .vIngredientes-item {
         width: 100%;
-        padding: 60px 0 60px 0px;
+        padding: 60px 0;
         background-color: var(--color-claro);
     }
     #verMasIngredientes {
@@ -299,16 +305,12 @@ header {position: relative;}
         height: 40vh;
         justify-content: center;
         align-items: center;
-    }
 
-    .ubicaciones-elemento {
+    }
+    .contUbicaciones {
         width: 100%;
     }
     #fita-hero {font-size: 40vw;}
 
-    button {
-        font-size: 20px;
-        white-space: nowrap;
-   
-    }
+
 }
