@@ -16,6 +16,8 @@
     --fntSize-txtSubttl: 22px;
     --fntSize-txtTtl: 40px;
     --fntSize-txtPeq: 14px;
+    --fntSize-txtH1-desktop: 96px;
+    --fntSize-txtH1-mobile: 64px;
 }
 @font-face {
     font-family: 'Fonarto';
@@ -63,6 +65,8 @@ img {
     margin: 0;
 }
 
+h1 {font-family: 'Asap Condensed', sans-serif; font-size: var(--fntSize-txtH1-desktop); text-transform: uppercase;}
+
 h2 {
     font-family: 'Arima', cursive;
     font-weight: 500;
@@ -80,6 +84,10 @@ p {
 /* DISPLAY */
 .grid {display: grid;}
 
+.allWidth {width: 100%;}
+
+.allHeight {height: 100%;}
+
 .flex {
     display: flex;
     flex-direction: row;
@@ -95,6 +103,9 @@ p {
     align-items: center;
 }
 
+.flxAlgnStrt {
+    align-items: baseline;
+}
 .flxBetween {
     justify-content: space-between;
 }
@@ -105,6 +116,7 @@ p {
 
 .gap20 {gap:20px}
 .gap25{gap:25px}
+.gap8 {gap: 8px;}
 
 .centerDiv {width:60%; margin:0 auto;}
 .espacio60 {height: 60px;}
@@ -137,7 +149,7 @@ p {
 
 .txt40 {font-size: var(--fntSize-txtTtl);}
 .txt22 {font-size: var(--fntSize-txtSubttl);}
-.txt96 {font-size: 96px;}
+.txt96 {font-size: var(--fntSize-txtH1-desktop);}
 .txt14 {font-size: var(--fntSize-txtPeq)}
 
 .fntArima {
@@ -150,16 +162,38 @@ p {
     font-weight: 700;
 }
 
-/* header */
+/* REUTILIZABLES */
 header {position: relative;}
 .navBar {
-    position: fixed;
+    position: sticky;
     z-index: 1000;
     max-width: 100%;
     width: 100%;
     padding: 0 15px;
-    background: rgba(21, 25, 27, 0.8);
+    background: var(--color-black);
 }
+.circulo {
+    height: 92px;
+    width: 92px;
+    border-radius: 50%;
+    background-color: var(--color-destaque);
+  }
+
+.hero {height: 35vh; padding-bottom: 30px;}
+
+.banner {
+    background: linear-gradient(0deg, rgba(172, 232, 148, 0.7), rgba(172, 232, 148, 0.7)), url(../img/fondo-blanco-lineas.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-productos{
+    /* grid-template-columns: repeat(auto-fit); */
+    gap: 74px;
+}
+/* INDEX */
+
+#index-navbar{background: rgba(21, 25, 27, 0.8); position: fixed;}
 
 #indexHero {
     background: radial-gradient(50% 50% at 50% 50%, rgba(33, 41, 34, 0) 6.77%, #212922 100%),url(../img/burger-hero.png);
@@ -174,7 +208,7 @@ header {position: relative;}
     padding-top: 5vh;
 }
 
-#hero-content {height: 100%;}
+#indexhero-content {height: 100%;}
 
 #fita-hero {font-size: 246px;}
 
@@ -205,15 +239,6 @@ header {position: relative;}
 .razonFita img {height: 50px; width: 50px;}
 
 #razones-container {gap: 100px;}
-
-/* Banner */
-
-.banner {
-    background: linear-gradient(0deg, rgba(172, 232, 148, 0.7), rgba(172, 232, 148, 0.7)), url(../img/fondo-blanco-lineas.png);
-    background-position: center;
-    background-size: cover;
-}
-
 
 /* Carousel menu */
 .carousel-container {
@@ -285,12 +310,38 @@ header {position: relative;}
     background-size: cover;
 }
 
+/* Productos */
+.bttnBolsa {
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+}
+
+.producto {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    border-radius: 22px;
+    gap: 8px;
+    width: 207px;
+    padding: 16px;
+ 
+}
+
+
 /* Media Queries */
 
 @media (max-width: 1020px) {
     /* Generales */
     .desaparecerMobile {display: none;}
     .vflexMobile {flex-direction: column; align-items: center;}
+    .stflexMobile{justify-content: flex-start;}
+    .hero div {align-items: baseline;}
+    .hero {height: 40vh;}
+
+
+    /* Elementos */
+    h1 {font-size: var(--fntSize-txtH1-mobile)}
     button {font-size: 20px; white-space: nowrap;}
 
     /* Banner */
