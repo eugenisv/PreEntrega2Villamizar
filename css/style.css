@@ -151,6 +151,7 @@ p {
 .txt22 {font-size: var(--fntSize-txtSubttl);}
 .txt96 {font-size: var(--fntSize-txtH1-desktop);}
 .txt14 {font-size: var(--fntSize-txtPeq)}
+.txtSubtitulo {font-family: 'Asap Condensed'; font-weight: 500; font-size: var(--fntSize-txtSubttl);}
 
 .fntArima {
     font-family: 'Arima', cursive;
@@ -188,8 +189,9 @@ header {position: relative;}
 }
 
 .grid-productos{
-    /* grid-template-columns: repeat(auto-fit); */
-    gap: 74px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 60px;
 }
 /* INDEX */
 
@@ -210,7 +212,7 @@ header {position: relative;}
 
 #indexhero-content {height: 100%;}
 
-#fita-hero {font-size: 246px;}
+#fita-hero {font-size: 246px; text-transform: capitalize;}
 
 .indexhero__SMlogos {
     position: absolute;
@@ -256,7 +258,6 @@ header {position: relative;}
 .carousel-control-prev {left: -10px;}  
 .carousel-control-next {right: -10px;}
 .carousel-item p {font-size: var(--fntSize-txtPeq);}
-.carousel-item p span {font-weight: 600; font-size: var(--fntSize-txtNormal);}
 
 
 /* Ingredientes */
@@ -322,11 +323,12 @@ header {position: relative;}
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     border-radius: 22px;
-    gap: 8px;
-    width: 207px;
     padding: 16px;
- 
+    width: 225px;
 }
+
+.producto-img {padding: 16px 25px;}
+
 
 
 /* Media Queries */
@@ -366,4 +368,27 @@ header {position: relative;}
         width: 100%;
     }
     #fita-hero {font-size: 40vw;}
+    /* Productos */
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    .grid-productos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 990px) {
+    .grid-productos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .grid-productos {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
 }
